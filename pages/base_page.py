@@ -17,5 +17,5 @@ class Base_page(Browser):
                     pass
 
         def wait_and_click_element_by_selector(self, by, selector):
-                WebDriverWait(self.chrome, 5).until(EC.presence_of_element_located((by, selector)))
-                self.chrome.find_element(by, selector).click()
+                WebDriverWait(self.driver, 5).until(EC.presence_of_element_located((by, selector)))
+                self.driver.find_element(by, selector).click()
